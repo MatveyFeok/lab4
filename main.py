@@ -1,29 +1,31 @@
 class Pokemon:
-    id = 0
-    name = ''
-    health = 0
-    attack = 0
-    type = ''
-    height = 0
-    weight = 0
-    def __init__(self, health, attack):
-        return health * attack
-    def pulse_check(self):
-        if health > 0:
-            print("pokemon is alive!")
-        else:
-            print("pokemon died!")
+    count = 0
+
+    def info(self, id,  name, type, species):
+        self.id = id
+        self.name = name
+        self.type = type
+        self.species = species
+        Pokemon.count += 1
+
+    def stats(self, id, health, attack, speed):
+        self.id = id
+        self.health = health
+        self.attack = attack
+        self.speed = speed
+
 
 class Ability:
-    abilities = ''
-    type = ''
-    spell_time = 0
-    mana_cost = 0
-    def __init__(self, type):
-        if type == "Poison":
-            return print("be careful! Pokemon is poisonous!")
-    def speed(self):
-        if spell_time > 10:
-            return print("your pokemon is so slow!")
+    
+    def info(self, id, abilities, type):
+        self.id = id
+        self.abilities = abilities
+        self.type = type
+
+    def stats(self, id, spell_time, mana_cost):
+        self.id = id
+        self.spell_time = spell_time
+        self.mana_cost = mana_cost
+
 
 
